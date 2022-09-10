@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:san serif;
+}
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:#f9f9f9;
+}
+.wrapper{
+width:280px;
+height:480px;
+box-shadow:0px 0px 5px darkgray;
+padding:10px;
+overflow:hidden;
+border-radius:20px;
+}
+input[type="radio"]{
+display:none;
+}
+.btns{
+text-align:center;
+margin:20px;
+display:flex;
+font-weight:600;
+justify-content:space-between;
+}
+.btn1, .btn2{
+padding:10px 15px;
+font-size:14px;
+border-radius:20px;
+box-shadow:0px 2px 3px darkgray;
+}
+.btn1:hover, .btn2:hover{
+background:royalblue;
+color:#fff;
+}
+h2{
+font-size:20px;
+}
+.signup{
+width:100%;
+height:100%;
+transition:1s ease-in-out;
+}
+.signin{
+transition:1s ease-in-out;
+}
+.text_field input{
+width:100%;
+padding:10px;
+margin-top:20px;
+outline:none;
+border:none;
+border-radius:15px;
+box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+.text_field input:hover{
+padding:12px;
+border:royalblue;
+box-shadow: 0px 5px 5px rgba(0,0,0,0.2);
+transition:0.5s ease-in-out;
+}
+.chkbox{
+margin-top:20px;
+font-size:13px;
+color:rgba(0,0,0,0.7);
+}
+.chkbox a{
+text-decoration:none;
+color:royalblue;
+}
+input[type="checkbox"]{
+accent-color:purple;
+}
+button{
+width:100%;
+height:40px;
+margin-top:20px;
+border-radius:20px;
+border:none;
+background:royalblue;
+color:#fff;
+font-weight:600;
+}
+#chk_signin:checked ~ .signin{
+transform:translateY(-410px);
+}
+#chk_signin:checked ~ .signup{
+filter:blur(50px);
+}
+#chk_signin:checked ~ #btn2 label{
+border:2px solid purple;
+color:#fff;
+}
+::-webkit-input-placeholder{
+color:#555;
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+<input type="radio" name="select" id="chk_signup" class="check1">
+<input type="radio" name="select" id="chk_signin" class="check2">
+
+<div class="btns">
+<div class="btn1">
+<label  for="chk_signup">Sign-up</label>
+</div>
+<div class="btn2">
+<label for="chk_signin">Log-in</label>
+</div>
+</div>
+
+<div class="signup">
+<h2>Sign-Up here</h2>
+<div class="text_field">
+<input type="text" placeholder="Username">
+<input type="email" placeholder="E-mail">
+<input type="tel" placeholder="Phone number">
+<input type="password" placeholder="Password">
+</div>
+<div class="chkbox">
+<input type="checkbox" id="agree">
+<label for="agree">I agree to the <a href="#" >Terms and Condition</a></label>
+</div>
+<button>Sign up</button>
+</div>
+
+<div class="signin">
+<h2>Login here</h2>
+<div class="text_field">
+<input type="text" placeholder="Username">
+<input type="password" placeholder="Password">
+</div>
+<div class="chkbox">
+<input type="checkbox" id="select">
+<label for="select">Remember me</label>
+</div>
+<button>Login</button>
+</div>
+
+</div>
+</body>
+</html>
